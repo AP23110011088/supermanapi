@@ -1,0 +1,173 @@
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.search-panels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.search-panel h2,
+.api-results h2,
+.empty-state h2 {
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.api-search-form {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.api-search-form .input {
+  flex: 1;
+}
+
+.list-error {
+  margin-bottom: 16px;
+}
+
+.api-results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.api-grid,
+.heroes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.api-card,
+.hero-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.api-card {
+  background: var(--panel-soft);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.api-image,
+.hero-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  background: #111;
+}
+
+.hero-card .hero-image,
+.hero-placeholder {
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+  background: #111;
+  color: var(--muted);
+  font-size: 0.9rem;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.hero-placeholder {
+  height: 220px;
+}
+
+.api-card h3,
+.hero-info h3 {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.api-card p,
+.real-name,
+.publisher,
+.powers {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.hero-info {
+  padding: 16px;
+  flex: 1;
+}
+
+.alignment {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  text-transform: capitalize;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.alignment.good {
+  color: #8ce4a8;
+}
+
+.alignment.bad {
+  color: #ff9aa1;
+}
+
+.alignment.neutral {
+  color: #f4d06f;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 10px;
+  padding: 0 16px 16px;
+}
+
+.hero-actions .btn {
+  flex: 1;
+}
+
+.empty-copy {
+  color: var(--muted);
+}
+
+.empty-state {
+  text-align: center;
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+}
+
+@media (max-width: 640px) {
+  .list-header {
+    flex-direction: column;
+  }
+
+  .api-search-form {
+    flex-direction: column;
+  }
+
+  .heroes-grid,
+  .api-grid {
+    grid-template-columns: 1fr;
+  }
+}
