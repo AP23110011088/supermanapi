@@ -53,6 +53,10 @@ if (fs.existsSync(clientBuildDir)) {
   app.get('*', (req, res) => {
     res.sendFile(path.join(clientBuildDir, 'index.html'));
   });
+} else {
+  app.get('/', (req, res) => {
+    res.status(503).json({ message: 'Client build not found. Run: npm run build' });
+  });
 }
 
 app.use((err, req, res, next) => {
