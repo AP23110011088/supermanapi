@@ -154,6 +154,8 @@ router.put('/:id', auth, (req, res, next) => {
 
     if (req.file) {
       superhero.imageUrl = await resolveImageUrl(req.file);
+    } else if (req.body.imageUrl !== undefined) {
+      superhero.imageUrl = req.body.imageUrl || null;
     }
 
     await superhero.save();

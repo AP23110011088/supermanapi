@@ -19,8 +19,7 @@ function getMongoUri(warnings = []) {
     '<db_username>',
     '<password>',
     'YOUR_USERNAME',
-    'YOUR_PASSWORD',
-    'cluster.mongodb.net'
+    'YOUR_PASSWORD'
   ];
 
   if (placeholders.some((placeholder) => uri.includes(placeholder))) {
